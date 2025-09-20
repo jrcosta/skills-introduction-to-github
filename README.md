@@ -82,6 +82,4 @@ Este projeto é destinado para fins educacionais e está disponível sob a licen
 
 **jrcosta** - Perfil no GitHub: [@jrcosta](https://github.com/jrcosta)
 
----
-
-*Este README foi criado como parte do processo de aprendizagem do GitHub e suas funcionalidades.*
+-
