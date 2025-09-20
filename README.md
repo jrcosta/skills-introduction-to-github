@@ -81,5 +81,3 @@ Este projeto é destinado para fins educacionais e está disponível sob a licen
 ## 👨‍💻 Autor
 
 **jrcosta** - Perfil no GitHub: [@jrcosta](https://github.com/jrcosta)
-
--
