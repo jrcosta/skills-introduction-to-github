@@ -1,11 +1,12 @@
+---
 name: Deploy to GitHub Pages
 
 # Executa o workflow quando há push na branch main ou master
-on:
+"on":
   push:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
 
   # Permite executar este workflow manualmente na aba Actions
   workflow_dispatch:
@@ -83,7 +84,7 @@ jobs:
       - name: Simular testes
         run: |
           echo "🧪 Executando verificações..."
-          
+
           # Verificar se index.html existe
           if [ -f "index.html" ]; then
             echo "✅ index.html encontrado"
@@ -91,7 +92,7 @@ jobs:
             echo "❌ index.html não encontrado"
             exit 1
           fi
-          
+
           # Verificar se styles.css existe
           if [ -f "styles.css" ]; then
             echo "✅ styles.css encontrado"
@@ -99,7 +100,7 @@ jobs:
             echo "❌ styles.css não encontrado"
             exit 1
           fi
-          
+
           # Verificar se script.js existe
           if [ -f "script.js" ]; then
             echo "✅ script.js encontrado"
@@ -107,7 +108,7 @@ jobs:
             echo "❌ script.js não encontrado"
             exit 1
           fi
-          
+
           echo "🎉 Todas as verificações passaram!"
 
       - name: Contar linhas de código
@@ -116,4 +117,5 @@ jobs:
           echo "Linhas de HTML: $(wc -l < index.html)"
           echo "Linhas de CSS: $(wc -l < styles.css)"
           echo "Linhas de JavaScript: $(wc -l < script.js)"
-          echo "Total de arquivos: $(find . -type f -not -path './.git/*' | wc -l)"
+          total_files=$(find . -type f -not -path './.git/*' | wc -l)
+          echo "Total de arquivos: $total_files"
